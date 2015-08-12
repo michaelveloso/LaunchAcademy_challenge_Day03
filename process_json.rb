@@ -4,10 +4,9 @@ require 'pry'
 
 file = File.read('roster.json')
 kickball_league = JSON.parse(file)
-#puts kickball_league
-
 league = League.new("Kickball")
+position_list = kickball_league.values[0].keys
 kickball_league.each do |team, positions|
-  league.teams << Team.new(team, positions)
+  league.teams[team] = Team.new(team, positions)
 end
-puts league
+puts league.players_at_position("Pitcher")

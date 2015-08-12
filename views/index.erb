@@ -12,6 +12,13 @@
         <li><a href="/home/<%= name %>"><%= name %></a></li>
       <% end %>
     </ul>
+
+    <h2>Positions</h2>
+    <ul>
+      <% position_list.each do |position| %>
+        <li><a href="/home/positions/<%= position %>"><%= position %></a></li>
+      <% end %>
+    </ul>
   </body>
 
 </html>

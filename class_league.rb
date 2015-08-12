@@ -9,4 +9,12 @@ class League
     @teams = teams
   end
 
+  def players_at_position (position)
+    list_of_players = []
+    teams.each do |name, team|
+      list_of_players << team.positions[position]
+    end
+    return list_of_players
+  end
+
 end
