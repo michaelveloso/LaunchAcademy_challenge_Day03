@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= team_name %></title>
+    <link rel="stylesheet" href="home.css">
+  </head>
+
+  <body>
+    <h1><%= team_name %></h1>
+    <ul>
+      <% league.teams[team_name].positions.each do |position, name| %>
+        <li><%= position %>: <%= name %></li>
+      <% end %>
+    </ul>
+  </body>
+
+</html>
